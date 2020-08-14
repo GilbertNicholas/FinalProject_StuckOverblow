@@ -14,3 +14,8 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::resource('questions', 'QuestionController');
+Route::resource('answers', 'AnswerController');
+Route::resource('questionComments', 'QuestionCommentController');
+Route::resource('answerComments', 'AnswerCommentController');
