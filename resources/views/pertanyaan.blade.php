@@ -16,12 +16,12 @@
                          Isi Pertanyaan, qqqqqqaaqqqqqqqaaaaaaaaaaaSome quick example text to build on the card title and make up the bulk of the card's content.
                      </div>
                      <div class="row float-right mt-3">
-                         <a href="#" class="d-inline float-right"><small class="text-primary">Vote : 4.5 / 5</small></a>
+                         <a class="d-inline float-right"><small class="text-primary">Vote : 4.5 / 5</small></a>
                      </div>
                      <div class="mt-4">
-                         <a href="#" class="btn btn-success btn-sm">Jawab</a>
-                         <a href="#" class="btn btn-primary btn-sm">Details</a>
-                         <a href="#" class="btn btn-danger btn-sm">Komentar</a>
+                         <a href="{{url('/jawaban')}}" class="btn btn-success btn-sm">Jawab</a>
+                         <a href="{{url('/details')}}" class="btn btn-primary btn-sm">Details</a>
+                         <a href="{{url('/komentar')}}" class="btn btn-danger btn-sm">Komentar</a>
                      </div>
                  </div>
          </div>

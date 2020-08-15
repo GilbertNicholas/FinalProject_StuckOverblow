@@ -29,3 +29,12 @@ Route::get('/tambah', function () {
 Route::get('/contact', function () {
     return view('contact');
 });
+Route::get('/details', function () {
+    return view('details');
+});
+Route::get('/jawaban', function () {
+    return view('jawaban');
+});
+Route::get('/komentar', function () {
+    return view('komentar');
+});
