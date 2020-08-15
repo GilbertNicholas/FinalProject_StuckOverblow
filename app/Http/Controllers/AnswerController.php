@@ -11,7 +11,7 @@ class AnswerController extends Controller
         $this->middleware('auth');
     }
 
-    public function create() {
+    public function create($id_pertanyaan) {
         return view('');
     }
 
@@ -34,20 +34,14 @@ class AnswerController extends Controller
         return view('index', compact('data'));
     }
 
-    public function show($id) {
-        $data = Answer::find($id);
-        
-        return view('show', compact('data'));
-    }
-
-    public function edit($id)
+    public function edit($id_jawaban)
     {
         $data = Answer::find($id);
 
         return view('edit', compact('data'));
     }
 
-    public function update($id, Request $request)
+    public function update($id_jawaban, Request $request)
     {
         $request->validate([
             'content' => 'required:max:255',
@@ -60,7 +54,7 @@ class AnswerController extends Controller
         return redirect('')->with('success', 'Jawaban berhasil diubah!');
     }
 
-    public function destroy($id)
+    public function destroy($id_jawaban)
     {
         Answer::destroy($id);
         

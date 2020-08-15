@@ -11,6 +11,7 @@
 |
 */
 
+// ROUTES MASTER
 Route::get('/', function () {
     return view('welcome');
 });
@@ -27,8 +28,21 @@ Route::get('/contact', function () {
     return view('contact');
 });
 
+// ROUTES PERTANYAAN
 Route::resource('questions', 'QuestionController');
-Route::resource('answers', 'AnswerController');
+
+// ROUTES JAWABAN
+Route::get('/jawaban/{id_pertanyaan}/tambah', 'AnswerController@create');
+
+Route::post('/jawaban', 'AnswerController@store');
+Route::get('/jawaban', 'AnswerController@index');
+
+Route::get('/jawaban/{id_jawaban}/edit', 'AnswerController@edit');
+Route::put('/jawaban/{id_jawaban}', 'AnswerController@update');
+
+Route::delete('/jawaban/{id_jawaban}', 'AnswerController@destroy');
+
+// BELUM SELESAI
 Route::resource('questionComments', 'QuestionCommentController');
 Route::resource('answerComments', 'AnswerCommentController');
 Auth::routes();
