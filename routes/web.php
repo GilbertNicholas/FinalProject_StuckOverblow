@@ -33,9 +33,6 @@ Route::get('/contact', function () {
 // ROUTES PERTANYAAN
 Route::resource('questions', 'QuestionController');
 
-// ROUTES PERTANYAAN SAYA
-Route::resource('myquestions', 'MyQuestionsController');
-
 // ROUTES JAWABAN
 Route::get('/jawaban/{id_pertanyaan}/tambah', 'AnswerController@create');
 

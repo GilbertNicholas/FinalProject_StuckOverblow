@@ -11,7 +11,7 @@ class AnswerController extends Controller
         $this->middleware('auth');
     }
 
-    public function create($id_pertanyaan) {
+    public function create($id_pertanyan) {
         return view('');
     }
 

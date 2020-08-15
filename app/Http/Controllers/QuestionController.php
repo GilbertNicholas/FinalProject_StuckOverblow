@@ -34,14 +34,14 @@ class QuestionController extends Controller
             "user_id" => Auth::user()->id
         ]);
 
-        return redirect('')->with('success', "Pertanyaan berhasil dibuat!");
+        return redirect('/index')->with('success', "Pertanyaan berhasil dibuat!");
     }
 
     public function index()
     {
-        $data = Question::all();
-
-        return view('pertanyaan', compact('data'));
+        $id = Auth::user()->id;
+        $data = DB::table('questions')->where('user_id', $id)->get();
+        return view('myquestions', compact('data'));
     }
 
     public function show($id)
@@ -55,7 +55,7 @@ class QuestionController extends Controller
     {
         $data = Question::find($id);
 
-        return view('edit', compact('data'));
+        return view('ubah', compact('data'));
     }
 
     public function update($id, Request $request)
@@ -72,13 +72,13 @@ class QuestionController extends Controller
             "tag" => $request["tag"]
         ]);
 
-        return redirect('')->with('success', 'Pertanyaan berhasil diubah!');
+        return redirect('index')->with('success', 'Pertanyaan berhasil diubah!');
     }
 
     public function destroy($id)
     {
         Question::destroy($id);
 
-        return redirect('')->with('success', 'Pertanyaan berhasil dihapus!');
+        return redirect('index')->with('success', 'Pertanyaan berhasil dihapus!');
     }
 }

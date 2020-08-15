@@ -89,7 +89,6 @@
                                 <p class="mb-5 pb-5 text-center">
                                     Gilbert Nicholas Winata<br>
                                     Ida Bagus Janar Dana<br>
-                                    Lina Sofiana
                                 </p>
                             </div>
                         </div>

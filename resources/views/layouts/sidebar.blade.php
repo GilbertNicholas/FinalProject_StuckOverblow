@@ -43,13 +43,13 @@
                             </a>
                             <ul class="nav nav-treeview">
                                 <li class="nav-item">
-                                    <a href="{{url('/questions')}}" class="nav-link">
+                                    <a href="/index" class="nav-link">
                                         <i class="nav-icon fas fa-table"></i>
                                         <p>Semua Pertanyaan</p>
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="{{url('/myquestions')}}" class="nav-link">
+                                    <a href="/questions" class="nav-link">
                                         <i class="fas fa-id-card-alt nav-icon"></i>
                                         <p>Pertanyaan Saya</p>
                                     </a>

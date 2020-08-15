@@ -3,6 +3,7 @@
 @section('title', 'Pertanyaan Saya')
 @section('breadcumb', 'Pertanyaan Saya')
 @section('pertanyaan-saya')
+<a href="{{url('/index')}}" class="btn btn-secondary btn-sm mb-3">Kembali</a>
 <div class="row">
     <div class="col-md-12">
         <div class="mr-3 p-1">
@@ -19,10 +20,13 @@
                     <div class="d-inline row float-right" style="margin-top:62px;">
                         <a class="float-right"><small class="text-primary">Vote : 4.5 / 5</small></a>
                     </div>
-                    <div class="d-inline">
-                        <a href="{{url('/myquestions')}}/{{$value->id}}" class="btn btn-primary btn-sm">Edit</a>
-                        <a href="{{url('/myquestions')}}/{{$value->id}}" class="btn btn-danger btn-sm">Hapus</a>
-                        <a href="{{url('/questions')}}" class="btn btn-secondary btn-sm">Kembali</a>
+                    <div style="display: flex;">
+                        <a href="{{ route('questions.edit', ['question' => $value->id]) }}" class="btn btn-primary btn-sm mr-2">Edit</a>
+                        <form action="{{ route('questions.destroy', ['question' => $value->id]) }}" method="POST">
+                                @csrf
+                                @method('DELETE')
+                                <input type="submit" value="Delete" class="btn btn-danger btn-sm">
+                        </form>
                     </div>
                 </div>
             </div>

@@ -21,7 +21,7 @@
                         <input type="text" class="form-control" readonly class="form-control-plaintext" value="{{$data->tag}}" id="tag">
                     </div>
                     <a href="{{url('/jawaban')}}" class="btn btn-primary btn-sm">Jawab</a>
-                    <a href="{{url('/questions')}}" class="btn btn-secondary btn-sm">Kembali</a>
+                    <a href="{{url('/index')}}" class="btn btn-secondary btn-sm">Kembali</a>
                 </form>
             </div>
         </div>
