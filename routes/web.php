@@ -44,7 +44,7 @@ Route::put('/jawaban/{id_jawaban}', 'AnswerController@update');
 
 Route::delete('/jawaban/{id_jawaban}', 'AnswerController@destroy');
 
-// BELUM SELESAI
+// ROUTES COMMENTS
 Route::resource('questionComments', 'QuestionCommentController');
 Route::resource('answerComments', 'AnswerCommentController');
 Auth::routes();
