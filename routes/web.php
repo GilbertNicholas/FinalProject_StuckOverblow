@@ -32,6 +32,10 @@ Route::get('/contact', function () {
 
 // ROUTES PERTANYAAN
 Route::resource('questions', 'QuestionController');
+// ROUTES EDIT PERTANYAAN
+Route::resource('edit', 'EditController');
+// ROUTES HAPUS PERTANYAAN
+Route::get('/hapus', 'HapusController@index');
 
 // ROUTES JAWABAN
 Route::get('/jawaban/{id_pertanyaan}/tambah', 'AnswerController@create');

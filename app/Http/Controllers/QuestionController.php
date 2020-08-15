@@ -9,15 +9,18 @@ use Auth;
 
 class QuestionController extends Controller
 {
-    public function __construct() {
+    public function __construct()
+    {
         $this->middleware('auth');
     }
 
-    public function create() {
-        return view('');
+    public function create()
+    {
+        return view('create');
     }
 
-    public function store(Request $request) {
+    public function store(Request $request)
+    {
         $request->validate([
             'title' => 'required:max:50',
             'content' => 'required:max:255',
@@ -34,16 +37,18 @@ class QuestionController extends Controller
         return redirect('')->with('success', "Pertanyaan berhasil dibuat!");
     }
 
-    public function index() {
+    public function index()
+    {
         $data = Question::all();
 
-        return view('index', compact('data'));
+        return view('pertanyaan', compact('data'));
     }
 
-    public function show($id) {
+    public function show($id)
+    {
         $data = Question::find($id);
-        
-        return view('show', compact('data'));
+
+        return view('details', compact('data'));
     }
 
     public function edit($id)
@@ -73,7 +78,7 @@ class QuestionController extends Controller
     public function destroy($id)
     {
         Question::destroy($id);
-        
+
         return redirect('')->with('success', 'Pertanyaan berhasil dihapus!');
     }
 }
