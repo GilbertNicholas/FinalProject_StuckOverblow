@@ -6,14 +6,15 @@
     <div class="col-md-8">
         <div class="card">
             <div class="card-body">
-                <form>
+                <form action="{{url('/questions')}}" method="POST">
+                    @csrf
                     <div class="form-group">
                         <label for="judul">Judul Pertanyaan</label>
-                        <input type="text" class="form-control" name="judul" id="judul" required placeholder="Ketikkan judul pertanyaan di sini...">
+                        <input type="text" class="form-control" name="title" id="judul" required placeholder="Ketikkan judul pertanyaan di sini...">
                     </div>
                     <div class="form-group">
                         <label for="isi">Isi Pertanyaan</label>
-                        <textarea class="form-control" id="isi" name="isi" rows="5" required placeholder="Ketikkan pertanyaan di sini..."></textarea>
+                        <textarea class="form-control" id="isi" name="content" rows="5" required placeholder="Ketikkan pertanyaan di sini..."></textarea>
                     </div>
                     <div class="form-group">
                         <label for="tag">Tag</label>

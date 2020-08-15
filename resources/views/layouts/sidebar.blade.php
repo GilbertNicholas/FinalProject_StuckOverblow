@@ -33,13 +33,34 @@
                                 </p>
                             </a>
                         </li>
-                        <li class="nav-item">
-                            <a href="{{url('/pertanyaan')}}" class="nav-link">
+                        <li class="nav-item has-treeview">
+                            <a href="#" class="nav-link">
                                 <i class="nav-icon fas fa-question-circle"></i>
                                 <p>
                                     Pertanyaan
                                 </p>
+                                <i class="fas fa-angle-left right"></i>
                             </a>
+                            <ul class="nav nav-treeview">
+                                <li class="nav-item">
+                                    <a href="{{url('/questions')}}" class="nav-link">
+                                        <i class="nav-icon fas fa-table"></i>
+                                        <p>Semua Pertanyaan</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="{{url('/edit')}}" class="nav-link">
+                                        <i class="fas fa-edit nav-icon"></i>
+                                        <p>Edit Pertanyaan</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="{{url('/hapus')}}" class="nav-link">
+                                        <i class="fas fa-trash-alt nav-icon"></i>
+                                        <p>Hapus Pertanyaan</p>
+                                    </a>
+                                </li>
+                            </ul>
                         </li>
                     </ul>
                 </nav>

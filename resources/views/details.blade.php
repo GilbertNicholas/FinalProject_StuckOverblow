@@ -10,18 +10,18 @@
                 <form>
                     <div class="form-group">
                         <label for="judul">Judul Pertanyaan</label>
-                        <input type="text" class="form-control" readonly class="form-control-plaintext" name="judul" id="judul">
+                        <input type="text" class="form-control" readonly class="form-control-plaintext" value="{{$data->title}}" id="judul">
                     </div>
                     <div class="form-group">
                         <label for="isi">Isi Pertanyaan</label>
-                        <textarea class="form-control" readonly class="form-control-plaintext" id="isi" name="isi" rows="5"></textarea>
+                        <textarea class="form-control" readonly class="form-control-plaintext" id="isi" value="" rows="5">{{$data->content}}</textarea>
                     </div>
                     <div class="form-group">
                         <label for="tag">Tag</label>
-                        <input type="text" class="form-control" readonly class="form-control-plaintext" name="tag" id="tag">
+                        <input type="text" class="form-control" readonly class="form-control-plaintext" value="{{$data->tag}}" id="tag">
                     </div>
                     <a href="{{url('/jawaban')}}" class="btn btn-primary btn-sm">Jawab</a>
-                    <a href="{{url('/')}}" class="btn btn-secondary btn-sm">Kembali</a>
+                    <a href="{{url('/questions')}}" class="btn btn-secondary btn-sm">Kembali</a>
                 </form>
             </div>
         </div>
