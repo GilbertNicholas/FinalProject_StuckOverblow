@@ -53,7 +53,7 @@ class QuestionController extends Controller
         return view('edit', compact('data'));
     }
 
-    public function update($id, Request $req)
+    public function update($id, Request $request)
     {
         $request->validate([
             'title' => 'required:max:50',
