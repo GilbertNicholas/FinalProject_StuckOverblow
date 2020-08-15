@@ -49,15 +49,9 @@
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="{{url('/edit')}}" class="nav-link">
-                                        <i class="fas fa-edit nav-icon"></i>
-                                        <p>Edit Pertanyaan</p>
-                                    </a>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="{{url('/hapus')}}" class="nav-link">
-                                        <i class="fas fa-trash-alt nav-icon"></i>
-                                        <p>Hapus Pertanyaan</p>
+                                    <a href="{{url('/myquestions')}}" class="nav-link">
+                                        <i class="fas fa-id-card-alt nav-icon"></i>
+                                        <p>Pertanyaan Saya</p>
                                     </a>
                                 </li>
                             </ul>

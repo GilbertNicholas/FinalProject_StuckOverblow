@@ -21,6 +21,7 @@
                         <input type="text" class="form-control" name="tag" id="tag" required placeholder="Ketikkan tag di sini...">
                     </div>
                     <button type="submit" class="btn btn-primary">Submit</button>
+                    <a href="{{url('/questions')}}" class="btn btn-secondary">Kembali</a>
                 </form>
             </div>
         </div>
