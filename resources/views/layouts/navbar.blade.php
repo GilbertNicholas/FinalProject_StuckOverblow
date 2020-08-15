@@ -36,7 +36,7 @@
               <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
                   <span class="dropdown-item dropdown-header">Settings</span>
                   <div class="dropdown-divider"></div>
-                  <a href="#" class="dropdown-item">
+                  <a href="{{ route('logout') }}" class="dropdown-item">
                       <i class="fas fa-sign-out-alt"></i> Logout
                   </a>
               </div>
