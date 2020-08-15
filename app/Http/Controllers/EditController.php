@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Question;
+use Illuminate\Support\Facades\DB;
+use Auth;
 
 class EditController extends Controller
 {
@@ -14,8 +16,8 @@ class EditController extends Controller
      */
     public function index()
     {
-        $data = Question::all();
-        $idUser = $data
+        $id = Auth::user()->id;
+        $data = DB::table('questions')->where('id', $id)->get();
         return view('edit', compact('data'));
     }
 
