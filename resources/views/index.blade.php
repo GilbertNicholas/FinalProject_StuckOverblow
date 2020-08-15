@@ -16,19 +16,23 @@
                      <th>Judul Pertanyaan</th>
                      <th>Isi Pertanyaan</th>
                      <th>Vote</th>
-                     <th>Opsi</th>
+                     <th>Tag</th>
                  </tr>
              </thead>
              <tbody>
-                 @for($i = 0; $i < 10; $i++) <tr>
-                     <td>{{$i}}</td>
-                     <td>Camino 1.5</td>
-                     <td>OSX.3+</td>
-                     <td>1.8</td>
-                     <td>A</td>
-                     </tr>
-                     @endfor
-
+                 @forelse($data as $i => $info)
+                    <tr>
+                        <td> {{$i + 1}} </td>
+                        <td> {{$info->title}} </td>
+                        <td> {{$info->content}} </td>
+                        <td>1.8</td>
+                        <td> {{$info->tag}} </td>
+                    </tr>
+                    @empty
+                    <tr>
+                        <td colspan="4" align="center">No Posts!</td>
+                    </tr>
+                @endforelse
              </tbody>
          </table>
      </div>
