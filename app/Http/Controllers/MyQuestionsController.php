@@ -7,7 +7,7 @@ use App\Question;
 use Illuminate\Support\Facades\DB;
 use Auth;
 
-class EditController extends Controller
+class MyQuestionsController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -18,7 +18,7 @@ class EditController extends Controller
     {
         $id = Auth::user()->id;
         $data = DB::table('questions')->where('id', $id)->get();
-        return view('edit', compact('data'));
+        return view('myquestions', compact('data'));
     }
 
     /**
@@ -50,7 +50,9 @@ class EditController extends Controller
      */
     public function show($id)
     {
-        //
+        $id = Auth::user()->id;
+        $data = DB::table('questions')->where('id', $id)->get();
+        return view('ubah', compact('data'));
     }
 
     /**
@@ -61,7 +63,6 @@ class EditController extends Controller
      */
     public function edit($id)
     {
-        //
     }
 
     /**
